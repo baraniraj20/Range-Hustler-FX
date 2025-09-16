@@ -150,6 +150,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== BEFORE/AFTER SLIDER LOGIC =====
+    const compareWrappers = document.querySelectorAll('.compare-wrapper');
+    compareWrappers.forEach(wrapper => {
+        const after = wrapper.querySelector('.compare-after');
+        const slider = wrapper.querySelector('.compare-slider');
+        if (!after || !slider) return;
+
+        let queued = false;
+        let nextValue = Number(slider.value);
+
+        const schedule = () => {
+            if (queued) return;
+            queued = true;
+            requestAnimationFrame(() => {
+                const clamped = Math.max(0, Math.min(100, nextValue));
+                after.style.width = clamped + '%';
+                queued = false;
+            });
+        };
+
+        // Initialize
+        schedule();
+
+        // Input change (continuous drag)
+        slider.addEventListener('input', (e) => {
+            nextValue = Number(e.target.value);
+            schedule();
+        });
+
+        // Click to move slider
+        wrapper.addEventListener('click', (e) => {
+            const rect = wrapper.getBoundingClientRect();
+            const percent = ((e.clientX - rect.left) / rect.width) * 100;
+            nextValue = Math.round(percent);
+            slider.value = String(nextValue);
+            schedule();
+        });
+    });
+
     // Intersection Observer for scroll animations
     const observerOptions = {
         threshold: 0.1,

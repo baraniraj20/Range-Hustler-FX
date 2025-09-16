@@ -18,12 +18,7 @@
         <!-- Desktop Navigation -->
         <nav class="header-nav desktop-nav">
             <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">About</a>
-            <a href="#" class="nav-link">Fees & Spreads</a>
-            <a href="#" class="nav-link">Platform & Tools</a>
-            <div class="dropdown">
-                <a href="#" class="nav-link">English</a>
-            </div>
+            <a href="#results" class="nav-link">Result of the X-Axis</a>
         </nav>
         
         <!-- Mobile/Tablet Navigation -->
@@ -35,10 +30,7 @@
         
         <nav class="mobile-nav" id="mobileNav">
             <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">About</a>
-            <a href="#" class="nav-link">Fees & Spreads</a>
-            <a href="#" class="nav-link">Platform & Tools</a>
-            <a href="#" class="nav-link">English</a>
+            <a href="#results" class="nav-link">Result of the X-Axis</a>
             <button class="login-btn mobile-login">Login/Register</button>
         </nav>
         
@@ -73,6 +65,39 @@
             <div class="scroll-wheel"></div>
         </div>
     </div>
+
+    <!-- Results: Before/After Comparison -->
+    <section class="compare-section" id="results">
+        <div class="compare-container">
+            <h2 class="compare-title">Results of The X-Axis</h2>
+            <p class="compare-subtitle">Drag the slider to compare before and after.</p>
+
+            <div class="compare-wrapper">
+                <img src="result of the X axis/before 1.png" alt="Before" class="compare-img" loading="lazy">
+                <div class="compare-after" style="width: 50%">
+                    <img src="result of the X axis/After 1.png" alt="After" class="compare-img" loading="lazy">
+                </div>
+                <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Comparison slider">
+            </div>
+
+            <div class="compare-wrapper">
+                <img src="result of the X axis/before 3.png" alt="Before" class="compare-img" loading="lazy">
+                <div class="compare-after" style="width: 50%">
+                    <img src="result of the X axis/After 3.png" alt="After" class="compare-img" loading="lazy">
+                </div>
+                <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Comparison slider">
+            </div>
+
+            <div class="compare-wrapper">
+                <img src="result of the X axis/compressed-images/before1.png" alt="Before (compressed)" class="compare-img" loading="lazy">
+                <div class="compare-after" style="width: 50%">
+                    <img src="result of the X axis/compressed-images/after1.png" alt="After (compressed)" class="compare-img" loading="lazy">
+                </div>
+                <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Comparison slider">
+            </div>
+
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
