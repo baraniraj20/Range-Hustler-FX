@@ -10,20 +10,40 @@
 <body>
     <!-- Header Section -->
     <header class="header">
-        <div class="tagline">Range Hustler Fx</div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="about.html" class="nav-item">About us</a>
-            <a href="services.html" class="nav-item">Our Services</a>
-            <a href="projects.html" class="nav-item active">Projects</a>
-            <a href="insights.html" class="nav-item">Insights</a>
-            <a href="contact.html" class="nav-item">Contact</a>
+        <div class="logo">
+            <div class="logo-icon">⚡</div>
+            <span class="logo-text">The X Axis</span>
         </div>
-    </nav>
+        
+        <!-- Desktop Navigation -->
+        <nav class="header-nav desktop-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Fees & Spreads</a>
+            <a href="projects.html" class="nav-link active">Platform & Tools</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">English</a>
+            </div>
+        </nav>
+        
+        <!-- Mobile/Tablet Navigation -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Fees & Spreads</a>
+            <a href="projects.html" class="nav-link active">Platform & Tools</a>
+            <a href="#" class="nav-link">English</a>
+            <button class="login-btn mobile-login">Login/Register</button>
+        </nav>
+        
+        <button class="login-btn desktop-login">Login/Register</button>
+    </header>
 
     <!-- Main Content -->
     <main class="page-content">
