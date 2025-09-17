@@ -137,6 +137,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Parallax effect for background
         document.body.style.backgroundPosition = `center ${rate}px`;
         
+        // Hide scroll indicator when scrolling starts
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            if (scrolled > 50) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
+                scrollIndicator.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
+                scrollIndicator.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            }
+        }
+        
         // Fade in animation for elements
         const elements = document.querySelectorAll('.hero-text, .trading-terminal');
         elements.forEach(element => {
