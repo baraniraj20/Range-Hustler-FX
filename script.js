@@ -110,6 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== SMOOTH SCROLLING AND INTERACTIONS =====
 document.addEventListener('DOMContentLoaded', function() {
+    // Anchor smooth-scroll for "Result of the X-Axis"
+    const resultsLinks = document.querySelectorAll('a[href="#results"]');
+    const resultsSection = document.getElementById('results');
+    resultsLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (resultsSection) {
+                e.preventDefault();
+                resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
     // Parallax effect for the 3D graphic
     const graphic3d = document.querySelector('.trading-terminal');
     const hero = document.querySelector('.hero');

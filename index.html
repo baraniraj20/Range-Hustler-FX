@@ -6,6 +6,7 @@
     <title>The X-Axis — Precision Trading with Algorithmic Power</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="x-favicon.svg">
 </head>
 <body>
     <!-- Header Section -->
@@ -64,52 +65,147 @@
             <div class="mouse-body"></div>
             <div class="scroll-wheel"></div>
         </div>
+		<div class="scroll-chevron" aria-hidden="true">⌄</div>
+		<div class="scroll-label">Scroll down</div>
     </div>
 
-    <!-- Results: Before/After Comparison -->
-    <section class="compare-section" id="results">
-        <div class="compare-container">
-            <h2 class="compare-title">Results of The X-Axis</h2>
-            <p class="compare-subtitle">Drag the slider to compare before and after.</p>
+	<!-- Removed the old results comparison section as requested -->
 
-            <div class="compare-wrapper">
-                <img src="result of the X axis/before 1.png" alt="Before" class="compare-img" loading="lazy">
-                <div class="compare-after" style="width: 50%">
-                    <img src="result of the X axis/After 1.png" alt="After" class="compare-img" loading="lazy">
-                </div>
-                <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Comparison slider">
-            </div>
+    <!-- Strategy Sections: Zen Wave, Euro Nexus, Prime Pivot -->
+    <section class="strategies" id="results">
+		<div class="strategy-grid">
+			<!-- Column Headers -->
+			<div class="grid-header"></div>
+			<div class="grid-header">
+				<h3 class="strategy-title">Zen Wave</h3>
+			</div>
+			<div class="grid-header">
+				<h3 class="strategy-title">Euro Nexus</h3>
+			</div>
+			<div class="grid-header">
+				<h3 class="strategy-title">Prime Pivot</h3>
+			</div>
 
-            <div class="compare-wrapper">
-                <img src="result of the X axis/before 3.png" alt="Before" class="compare-img" loading="lazy">
-                <div class="compare-after" style="width: 50%">
-                    <img src="result of the X axis/After 3.png" alt="After" class="compare-img" loading="lazy">
-                </div>
-                <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Comparison slider">
-            </div>
+			<!-- Before Row -->
+			<div class="row-label">before</div>
+			<div class="strategy-block">
+				<img src="result of the X axis/before 1.png" alt="Zen Wave before chart" class="strategy-img" loading="lazy">
+			</div>
+			<div class="strategy-block placeholder"><span>before</span></div>
+			<div class="strategy-block placeholder"><span>before</span></div>
 
-            <div class="compare-wrapper">
-                <img src="result of the X axis/compressed-images/before1.png" alt="Before (compressed)" class="compare-img" loading="lazy">
-                <div class="compare-after" style="width: 50%">
-                    <img src="result of the X axis/compressed-images/after1.png" alt="After (compressed)" class="compare-img" loading="lazy">
-                </div>
-                <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Comparison slider">
-            </div>
+			<!-- After Row -->
+			<div class="row-label">after</div>
+			<div class="strategy-block">
+				<img src="result of the X axis/After 1.png" alt="Zen Wave after chart" class="strategy-img" loading="lazy">
+			</div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+			<div class="strategy-block placeholder"><span>after</span></div>
 
-            <!-- View More Results Button -->
-            <div class="view-more-container">
-                <a href="https://drive.google.com/drive/folders/1E3kxqV4r1gEZyYk6Ajygysm5CMvQMr93?usp=sharing" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="btn-view-more">
-                    <span class="btn-icon">📊</span>
-                    <span class="btn-text">View More Results</span>
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
+			<!-- Additional Zen Wave pair (ordered) -->
+			<div class="row-label">before</div>
+			<div class="strategy-block">
+				<img src="result of the X axis/2/before 12.png" alt="Zen Wave before chart 2" class="strategy-img" loading="lazy">
+			</div>
+			<div class="strategy-block placeholder"><span>before</span></div>
+			<div class="strategy-block placeholder"><span>before</span></div>
 
-        </div>
-    </section>
+			<div class="row-label">after</div>
+			<div class="strategy-block">
+				<img src="result of the X axis/2/After 12.png" alt="Zen Wave after chart 2" class="strategy-img" loading="lazy">
+			</div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+
+			<!-- Additional Zen Wave pair (ordered) from 2/3 -->
+			<div class="row-label">before</div>
+			<div class="strategy-block">
+				<img src="result of the X axis/2/3/before 2.png" alt="Zen Wave before chart 3" class="strategy-img" loading="lazy">
+			</div>
+			<div class="strategy-block placeholder"><span>before</span></div>
+			<div class="strategy-block placeholder"><span>before</span></div>
+
+			<div class="row-label">after</div>
+			<div class="strategy-block">
+				<img src="result of the X axis/2/3/After 2.png" alt="Zen Wave after chart 3" class="strategy-img" loading="lazy">
+			</div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+
+		</div>
+	</section>
+
+	<!-- Mobile-friendly stacked strategies -->
+    <section class="strategies-mobile" aria-label="Strategies (mobile view)">
+		<div class="strategy-stack">
+			<h3 class="strategy-title">Zen Wave</h3>
+			<div class="row-label">before</div>
+			<div class="strategy-block"><img src="result of the X axis/before 1.png" alt="Zen Wave before" class="strategy-img" loading="lazy"></div>
+			<div class="row-label">after</div>
+			<div class="strategy-block"><img src="result of the X axis/After 1.png" alt="Zen Wave after" class="strategy-img" loading="lazy"></div>
+
+			<!-- Additional pair from 2/ (before 12 / After 12) -->
+			<div class="row-label">before</div>
+			<div class="strategy-block"><img src="result of the X axis/2/before 12.png" alt="Zen Wave before 2" class="strategy-img" loading="lazy"></div>
+			<div class="row-label">after</div>
+			<div class="strategy-block"><img src="result of the X axis/2/After 12.png" alt="Zen Wave after 2" class="strategy-img" loading="lazy"></div>
+
+			<!-- Additional pair from 2/3 (before 2 / After 2) -->
+			<div class="row-label">before</div>
+			<div class="strategy-block"><img src="result of the X axis/2/3/before 2.png" alt="Zen Wave before 3" class="strategy-img" loading="lazy"></div>
+			<div class="row-label">after</div>
+			<div class="strategy-block"><img src="result of the X axis/2/3/After 2.png" alt="Zen Wave after 3" class="strategy-img" loading="lazy"></div>
+		</div>
+
+		<div class="strategy-stack">
+			<h3 class="strategy-title">Euro Nexus</h3>
+			<div class="row-label">before</div>
+			<div class="strategy-block placeholder"><span>before</span></div>
+			<div class="row-label">after</div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+		</div>
+
+		<div class="strategy-stack">
+			<h3 class="strategy-title">Prime Pivot</h3>
+			<div class="row-label">before</div>
+			<div class="strategy-block placeholder"><span>before</span></div>
+			<div class="row-label">after</div>
+			<div class="strategy-block placeholder"><span>after</span></div>
+		</div>
+	</section>
+
+    <!-- View More Results Button -->
+    <div class="view-more-container">
+        <a href="https://drive.google.com/drive/folders/1E3kxqV4r1gEZyYk6Ajygysm5CMvQMr93?usp=sharing" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-view-more">
+            <span class="btn-icon">📊</span>
+            <span class="btn-text">View More Results</span>
+            <span class="btn-arrow">→</span>
+        </a>
+    </div>
+
+    <!-- Social CTAs -->
+    <div class="social-cta-container">
+        <a href="https://whatsapp.com/channel/0029VbAsphR2ER6hneyvIK0h" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-social whatsapp">
+            <span class="btn-icon">💬</span>
+            <span class="btn-text">Join our channel</span>
+            <span class="btn-arrow">→</span>
+        </a>
+
+        <a href="https://www.instagram.com/_the_x_axis__?igsh=MXNoanBkbnYxMmg2bA==" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-social instagram">
+            <span class="btn-icon">📸</span>
+            <span class="btn-text">Follow on Instagram</span>
+            <span class="btn-arrow">→</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>
